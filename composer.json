@@ -1,0 +1,23 @@
+{
+    "name": "mubasharkk/atlassian",
+    "description": "The development team needs a REST API to capture and collect data from Atlassian Marketplace to decide which apps to develop",
+    "type": "plugin",
+    "autoload": {
+        "psr-4": {
+            "Mubasharkk\\Atlassian\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Mubashar Khokhar",
+            "email": "m.khokhar@social-gizmo.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    }
+}
