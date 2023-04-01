@@ -18,6 +18,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "guzzlehttp/guzzle": "^7.0"
+        "guzzlehttp/guzzle": "^7.0",
+        "league/fractal": "1.0.x-dev"
     }
 }
