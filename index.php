@@ -2,13 +2,13 @@
 
 require_once 'vendor/autoload.php';
 
-use \Mubasharkk\Atlassian\Services;
+use \Mubasharkk\Atlassian;
 
-$appService = new Services\ApplicationService();
-
-//$list = $appService->getAppsList();
-$addOns = $appService->getAddons($_GET);
+$appService = new Atlassian\Services\ApplicationService();
 
 header('Content-Type: application/json; charset=utf-8');
-//echo $list->toJson();
-echo $addOns->toJson();
+try {
+    echo $appService->getAddons($_GET)->toJson();
+} catch (Atlassian\Exceptions\BadRequest $ex) {
+    echo $ex->toJson();
+}
