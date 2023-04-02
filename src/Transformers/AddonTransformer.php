@@ -31,8 +31,8 @@ class AddonTransformer extends TransformerAbstract
             'logo'          => $embeddedData['logo']['_links']['highRes']['href'] ?? $embeddedData['logo']['_links']['image']['href'],
             'reviews'       => $embeddedData['reviews'],
             'downloads'     => $embeddedData['distribution']['downloads'],
-            'totalInstalls' => $embeddedData['distribution']['totalInstalls'],
-            'totalUsers'    => $embeddedData['distribution']['totalUsers'],
+            'totalInstalls' => $embeddedData['distribution']['totalInstalls'] ?? 0,
+            'totalUsers'    => $embeddedData['distribution']['totalUsers'] ?? 0 ,
         ];
     }
 
