@@ -1,0 +1,136 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Atlassian Marketplace ",
+        "description": "API documentation for Atlassian Marketplace Addon search",
+        "termsOfService": "",
+        "contact": {
+            "email": "m.khokhar@social-gizmo.com"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000"
+        }
+    ],
+    "paths": {
+        "/": {
+            "get": {
+                "tags": [
+                    "Addons"
+                ],
+                "summary": "Basic endpoint to get Addons",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "description": "List of API result add-ons from Atlassian",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "key": {
+                                                        "type": "string",
+                                                        "description": "The unique identifier for this app",
+                                                        "example": "com.atlassian.confluence.plugins.confluence-questions"
+                                                    },
+                                                    "name": {
+                                                        "type": "string",
+                                                        "description": "The display name of the application",
+                                                        "example": "Jira"
+                                                    },
+                                                    "description": {
+                                                        "type": "string",
+                                                        "description": "Summary of the app's functionality"
+                                                    },
+                                                    "link": {
+                                                        "type": "string",
+                                                        "description": "Atlassian link to the Addon",
+                                                        "format": "url",
+                                                        "example": "https://marketplace.atlassian.com/apps/1228478/cross-project-board-for-jira"
+                                                    },
+                                                    "logo": {
+                                                        "type": "string",
+                                                        "description": "Logo of the APP",
+                                                        "format": "url",
+                                                        "example": "https://marketplace-cdn.atlassian.com/files/14cce53b-91a2-4305-87dd-d600d7bc6c81"
+                                                    },
+                                                    "categories": {
+                                                        "type": "array",
+                                                        "description": "Information about any categories that the app belongs to",
+                                                        "items": {
+                                                            "type": "string",
+                                                            "example": "IT & Support"
+                                                        }
+                                                    },
+                                                    "vendor": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "name": {
+                                                                "type": "string",
+                                                                "description": "Name of the vendor",
+                                                                "example": "ALDEVA DIGITAL s.r.o."
+                                                            },
+                                                            "link": {
+                                                                "type": "string",
+                                                                "format": "url",
+                                                                "example": "https://marketplace.atlassian.com/vendors/1218276/aldeva-digital-s-r-o"
+                                                            }
+                                                        }
+                                                    },
+                                                    "status": {
+                                                        "type": "string",
+                                                        "description": "Indicates whether the app is public, private, or pending approval",
+                                                        "enum": [
+                                                            "public", "private", "readytolaunch", "rejected", "submitted"
+                                                        ]
+                                                    },
+                                                    "reviews": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "averageStars": {
+                                                                "type": "number",
+                                                                "format": "int64",
+                                                                "description": "Average number of stars"
+                                                            },
+                                                            "count": {
+                                                                "type": "number",
+                                                                "format": "int64",
+                                                                "description": "Total number of reviews"
+                                                            }
+                                                        }
+                                                    },
+                                                    "downloads": {
+                                                        "type": "number",
+                                                        "format": "int64",
+                                                        "description": "Average number of stars"
+                                                    },
+                                                    "totalInstalls": {
+                                                        "type": "number",
+                                                        "format": "int64",
+                                                        "description": "Average number of stars"
+                                                    },
+                                                    "totalUsers": {
+                                                        "type": "number",
+                                                        "format": "int64",
+                                                        "description": "Average number of stars"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
