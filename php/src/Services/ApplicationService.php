@@ -13,15 +13,12 @@ use Psr\Http\Message\ResponseInterface;
 class ApplicationService
 {
     protected Client $client;
-    private array $config;
     private Manager $fractal;
 
     public function __construct()
     {
-        $this->config = require __DIR__.'/../config/atlassian-api.php';
         $this->client = new Client([
-            'base_uri' => $this->config['baseUri'],
-            ''
+            'base_uri' => 'https://marketplace.atlassian.com/rest/2/',
         ]);
         $this->fractal = new Manager();
     }
