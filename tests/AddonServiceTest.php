@@ -1,4 +1,5 @@
-<?php declare(strict_types=1);
+<?php
+declare(strict_types=1);
 
 use Mubasharkk\Atlassian\Services\ApplicationService;
 use PHPUnit\Framework\TestCase;
@@ -25,11 +26,14 @@ class AddonServiceTest extends TestCase
     {
         $addons = $this->service->getAddons([
             'category' => 'Deployments',
-            'limit' => 5
+            'limit'    => 5
         ]);
 
-        $this->assertCount(5, $addons->toArray()['data']);
+        foreach ($addons->toArray()['data'] as $item) {
+            $this->assertContains('Deployments', $item['categories']);
+        }
 
+        $this->assertCount(5, $addons->toArray()['data']);
     }
 }
 
