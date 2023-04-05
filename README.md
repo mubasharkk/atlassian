@@ -31,9 +31,23 @@ https://developer.atlassian.com/platform/marketplace/rest/v2/api-group-apps/#api
 
 </details>
 
-# Running the app
+### Documentation
+* (Optional) It would be nice if there was user-friendly documentation for the REST API
+  * [Available here](https://mubasharkk.github.io/atlassian/)
+  * The API documentation remains the same for both projects
+
+
+# PHP Application 
+
+<details>
+<summary>The API is built on core PHP without using any framework.</summary>
+
+### Running the PHP application
 
 ```
+#go to the php app directory
+$ cd php/
+
 #insalling composer dependencies
 $ composer install
 
@@ -41,12 +55,10 @@ $ composer install
 $ php -S localhost:8000 ./index.php
 ```
 
-### Documentation
-* (Optional) It would be nice if there was user-friendly documentation for the REST API
-  * [Available here](https://mubasharkk.github.io/atlassian/) 
 
-# Testing the APP
+### Testing the PHP application with PhpUnit
 
 ```
 $ ./vendor/bin/phpunit ./tests/AddonServiceTest.php
 ```
+</details>
