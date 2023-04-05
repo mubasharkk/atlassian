@@ -1,6 +1,7 @@
 # Task Description
-The development team needs a REST API to capture and collect data from Atlassian Marketplace to decide
-which apps to develop.
+<details>
+<summary>The development team needs a REST API to capture and collect data from Atlassian Marketplace to decide
+which apps to develop.</summary>
 
 The Atlassian Marketplace API has to be used for this:
 https://developer.atlassian.com/platform/marketplace/rest/v2/api-group-apps/#api-addons-get
@@ -28,10 +29,7 @@ https://developer.atlassian.com/platform/marketplace/rest/v2/api-group-apps/#api
   * [x] The number of the installs
   * [x] The number of users of the app
 
-
-### Documentation
-* (Optional) It would be nice if there was user-friendly documentation for the REST API
-  * [Available here](https://mubasharkk.github.io/atlassian/) 
+</details>
 
 # Running the app
 
@@ -41,4 +39,14 @@ $ composer install
 
 #executing the index.php file
 $ php -S localhost:8000 ./index.php
+```
+
+### Documentation
+* (Optional) It would be nice if there was user-friendly documentation for the REST API
+  * [Available here](https://mubasharkk.github.io/atlassian/) 
+
+# Testing the APP
+
+```
+$ ./vendor/bin/phpunit ./tests/AddonServiceTest.php
 ```
