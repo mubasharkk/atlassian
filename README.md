@@ -31,7 +31,7 @@ https://developer.atlassian.com/platform/marketplace/rest/v2/api-group-apps/#api
 
 ### Documentation
 * (Optional) It would be nice if there was user-friendly documentation for the REST API
-
+  * [Available here](https://mubasharkk.github.io/atlassian/) 
 
 # Running the app
 
