@@ -28,6 +28,9 @@ class ApplicationService
         return $this->client;
     }
 
+    /**
+     * Returns a list of AddOns from Atlassian API
+     */
     public function getAddons(array $queryParams = [])
     {
         try {
@@ -51,6 +54,9 @@ class ApplicationService
         );
     }
 
+    /**
+     * Returns a list of Applications from Atlassian API
+     */
     public function getAppsList(array $queryParams = []): \League\Fractal\Scope
     {
         $data = $this->prepareResponse(

@@ -36,6 +36,14 @@ https://developer.atlassian.com/platform/marketplace/rest/v2/api-group-apps/#api
   * [Available here](https://mubasharkk.github.io/atlassian/)
   * The API documentation remains the same for both projects
 
+# Details
+
+I have built 2 applications to display my technical expertise , first application is based on 
+PHP without using any framework and second application is built using ExpressJs framework.
+The application structure is simple and should be easy to understand. 
+
+In case you have any question regarding any technical details or its execution, you can reach me via github, email or phone.
+
 
 # PHP Application 
 
