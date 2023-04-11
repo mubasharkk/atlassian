@@ -1,0 +1,31 @@
+{
+  "name": "atlassian",
+  "version": "1.0.0",
+  "description": "The development team needs a REST API to capture and collect data from Atlassian Marketplace to decide which apps to develop.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mubasharkk/atlassian.git"
+  },
+  "keywords": [
+    "atlassian"
+  ],
+  "author": "Mubashar Khokhar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mubasharkk/atlassian/issues"
+  },
+  "homepage": "https://github.com/mubasharkk/atlassian#readme",
+  "dependencies": {
+    "axios": "^1.3.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
