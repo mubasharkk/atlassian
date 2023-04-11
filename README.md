@@ -62,3 +62,21 @@ $ php -S localhost:8000 ./index.php
 $ ./vendor/bin/phpunit ./tests/AddonServiceTest.php
 ```
 </details>
+
+# NodeJs Application
+
+```
+#go to the nodejs app directory
+$ cd nodejs/
+
+#insalling NPM dependencies
+$ npm install
+
+#executing the app.js file
+$ npm start
+
+OR 
+
+$ node app.js
+```
+
