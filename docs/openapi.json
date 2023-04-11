@@ -17,7 +17,7 @@
     "paths": {
         "/api/addons": {
             "get": {
-                "tags": ["Addons", "API"],
+                "tags": ["Addons - API"],
                 "summary": "Basic endpoint to get Addons",
                 "responses": {
                     "200": {
