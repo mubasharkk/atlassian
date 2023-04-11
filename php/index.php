@@ -16,7 +16,7 @@ switch ($urlpath) {
         echo json_encode([
             'version' => '1.0.0',
             'availableRoutes' => [
-                'GET /addons'
+                'GET /api/addons'
             ]
         ]);
         break;

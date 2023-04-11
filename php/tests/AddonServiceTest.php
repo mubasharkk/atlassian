@@ -31,6 +31,14 @@ class AddonServiceTest extends TestCase
 
         foreach ($addons->toArray()['data'] as $item) {
             $this->assertContains('Deployments', $item['categories']);
+            $this->assertArrayHasKey('name', $item);
+            $this->assertArrayHasKey('description', $item);
+            $this->assertArrayHasKey('link', $item);
+            $this->assertArrayHasKey('vendor', $item);
+            $this->assertArrayHasKey('totalInstalls', $item);
+            $this->assertArrayHasKey('reviews', $item);
+            $this->assertArrayHasKey('categories', $item);
+            $this->assertArrayHasKey('downloads', $item);
         }
 
         $this->assertCount(5, $addons->toArray()['data']);
