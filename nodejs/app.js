@@ -24,6 +24,7 @@ app.get('/api/addons', async (req, res) => {
 });
 
 app.get('/', (req, res) => {
+    res.status(200);
     return res.json({
         'version': '1.0.0',
         'availableRoutes': [
@@ -33,6 +34,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('*', (req, res) => {
+    res.status(404);
     return res.json({
         'error': 'Route not found'
     });
@@ -41,3 +43,5 @@ app.get('*', (req, res) => {
 app.listen(port, () => {
     console.log(`MubasharKk NodeJs App is listening on port ${port}`)
 })
+
+module.exports = app;

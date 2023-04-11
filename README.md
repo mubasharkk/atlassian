@@ -85,6 +85,12 @@ OR
 
 $ node app.js
 ```
+
+### Testing the PHP application with PhpUnit
+
+```
+$ npm test
+```
 </details>
 
 ### Codebase to look into
