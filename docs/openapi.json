@@ -17,8 +17,96 @@
     "paths": {
         "/api/addons": {
             "get": {
-                "tags": ["Addons - API"],
+                "tags": [
+                    "Addons - API"
+                ],
                 "summary": "Basic endpoint to get Addons",
+                "parameters": [
+                    {
+                        "name": "application",
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "jira",
+                        "description": "Only returns apps compatible with this application"
+                    },
+                    {
+                        "name": "applicationBuild",
+                        "in": "path",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "example": 123,
+                        "description": "Only returns apps compatible with the specified application build number"
+                    },
+                    {
+                        "name": "category",
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "Deployments",
+                        "description": "Only returns apps with any of the specified categories"
+                    },
+                    {
+                        "name": "cost",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "enum": [ "free", "marketplace", "orderable", "paid"]
+                        },
+                        "example": "free",
+                        "description": "Only returns apps with the specified payment model"
+                    },
+                    {
+                        "name": "hosting",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "enum": [ "any", "cloud", "datacenter", "server"]
+                        },
+                        "example": "datacenter",
+                        "description": "Only returns apps with the specified hosting model"
+                    },
+                    {
+                        "name": "filter",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "enum": [ "atlassian", "codegeist", "highest-rated", "name", "new", "popular", "recent", "top-grossing", "top-vendor", "..."]
+                        },
+                        "example": "popular",
+                        "description": "Return apps filtered or sorted using the specified parameter"
+                    },
+                    {
+                        "name": "text",
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "demo 123",
+                        "description": "Only returns apps that match the search text"
+                    },
+                    {
+                        "name": "offset",
+                        "in": "path",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "example": 5,
+                        "description": "If specified, skips ahead by this number of items"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "path",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "example": 20,
+                        "description": "If specified, limits the result set to this number of items"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "successful operation",
@@ -86,7 +174,11 @@
                                                         "type": "string",
                                                         "description": "Indicates whether the app is public, private, or pending approval",
                                                         "enum": [
-                                                            "public", "private", "readytolaunch", "rejected", "submitted"
+                                                            "public",
+                                                            "private",
+                                                            "readytolaunch",
+                                                            "rejected",
+                                                            "submitted"
                                                         ]
                                                     },
                                                     "reviews": {
