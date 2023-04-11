@@ -63,7 +63,13 @@ $ ./vendor/bin/phpunit ./tests/AddonServiceTest.php
 ```
 </details>
 
+### Codebase to look into
+All the important code to examine is in [./php/src/](https://github.com/mubasharkk/atlassian/tree/master/php/src)
+
 # NodeJs Application
+
+<details>
+<summary>The API is built on using ExpressJs framework for nodejs.</summary>
 
 ```
 #go to the nodejs app directory
@@ -79,4 +85,8 @@ OR
 
 $ node app.js
 ```
+</details>
+
+### Codebase to look into
+All the important code to examine is in [./nodejs/src/](https://github.com/mubasharkk/atlassian/tree/master/nodejs/src)
 
