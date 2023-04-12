@@ -47,7 +47,7 @@ In case you have any question regarding any technical details or its execution, 
 
 # PHP Application 
 
-<details>
+<details open>
 <summary>The API is built on core PHP without using any framework.</summary>
 
 ### Running the PHP application
@@ -76,7 +76,7 @@ All the important code to examine is in [./php/src/](https://github.com/mubashar
 
 # NodeJs Application
 
-<details>
+<details open>
 <summary>The API is built on using ExpressJs framework for nodejs.</summary>
 
 ```
